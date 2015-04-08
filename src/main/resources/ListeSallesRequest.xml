@@ -1,0 +1,4 @@
+<ListeSallesRequest xmlns="http://ws/listeSalles/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://ws/listeSalles/schemas ListeSalles.xsd">
+    <filmID>2</filmID>
+</ListeSallesRequest>

@@ -7,5 +7,14 @@
 
     <sws:annotation-driven/>
 
+    <bean id="listeSallesEndpoint" class="ws.ListeSallesEndpoint"/>
+
+    <sws:dynamic-wsdl id="exemple"
+                      portTypeName="ListeSalles"
+                      locationUri="/ws/"
+                      targetNamespace="http://ws/listeSalles/exemple">
+        <sws:xsd location="/WEB-INF/xsd/ListeSalles.xsd"/>
+    </sws:dynamic-wsdl>
+
 
 </beans>
