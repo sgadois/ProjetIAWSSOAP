@@ -9,10 +9,10 @@
 
     <bean id="listeSallesEndpoint" class="ws.ListeSallesEndpoint"/>
 
-    <sws:dynamic-wsdl id="exemple"
-                      portTypeName="ListeSalles"
+    <sws:dynamic-wsdl id="schemas"
+                      portTypeName="theaters"
                       locationUri="/ws/"
-                      targetNamespace="http://ws/listeSalles/exemple">
+                      targetNamespace="http://ws/theaters/schemas">
         <sws:xsd location="/WEB-INF/xsd/ListeSalles.xsd"/>
     </sws:dynamic-wsdl>
 

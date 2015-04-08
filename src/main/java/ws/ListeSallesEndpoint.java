@@ -12,14 +12,14 @@ import org.w3c.dom.Element;
 @Endpoint
 public class ListeSallesEndpoint {
 
-    private static final String NAMESPACE_URI = "http://iaws/ws/listesalles/schemas";
+    private static final String NAMESPACE_URI = "http://ws/theaters/schemas";
 
     public ListeSallesEndpoint() {
     }
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "ListeSallesRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "theatersRequest")
     @ResponsePayload
-    public Element handleListeSallesReqyest(@XPathParam("/ListeSallesRequest/filmID/text()") String filmId)
+    public Element handleListeSallesReqyest(@XPathParam("/theatersRequest/filmID/text()") String filmId)
             throws Exception {
 
         // parse le XML de ReleveNotesRequest pour extraire les informations de

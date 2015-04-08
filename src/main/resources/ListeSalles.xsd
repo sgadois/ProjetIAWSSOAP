@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws/listeSalles/schemas">
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws/theaters/schemas">
 
-    <xs:element name="ListeSalles" type="exem:ListeSallesType" xmlns:exem="http://ws/listeSalles/schemas"/>
+    <xs:element name="theaters" type="exem:theatersType" xmlns:exem="http://ws/theaters/schemas"/>
 
-    <xs:complexType name="salleType">
+    <xs:complexType name="theaterType">
         <xs:all>
-            <xs:element name="nom" type="xs:string"/>
-            <xs:element name="ville" type="xs:string"/>
-            <xs:element name="codePostal" type="xs:string"/>
-            <xs:element name="departement" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="region" type="xs:string"/>
+            <xs:element name="zipcode" type="xs:string"/>
         </xs:all>
         <xs:attribute type="xs:int" name="id" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="ListeSallesType">
+    <xs:complexType name="theatersType">
         <xs:sequence>
-            <xs:element type="exem:salleType" name="salle" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://ws/listeSalles/schemas"/>
+            <xs:element type="exem:theaterType" name="theater" maxOccurs="unbounded" minOccurs="0" xmlns:exem="http://ws/theaters/schemas"/>
         </xs:sequence>
         <xs:attribute type="xs:int" name="filmID" use="required"/>
     </xs:complexType>
 
 
 
-    <xs:element name="ListeSallesRequest" type="exem:ListeSallesRequestType" xmlns:exem="http://ws/listeSalles/schemas"/>
+    <xs:element name="theatersRequest" type="exem:theatersRequestType" xmlns:exem="http://ws/theaters/schemas"/>
 
-    <xs:complexType name="ListeSallesRequestType">
+    <xs:complexType name="theatersRequestType">
         <xs:all>
             <xs:element type="xs:string" name="filmID"/>
         </xs:all>

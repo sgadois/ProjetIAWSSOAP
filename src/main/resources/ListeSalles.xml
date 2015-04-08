@@ -1,15 +1,15 @@
-<ListeSalles xmlns="http://ws/listeSalles/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://ws/listeSalles/schemas ListeSalles.xsd" filmID="2">
-    <salle id="1">
-        <nom>Gaumont</nom>
-        <ville>Toulouse</ville>
-        <codePostal>31000</codePostal>
-        <departement>Haute-Garonne</departement>
-    </salle>
-    <salle id="2">
-        <nom>UGC</nom>
-        <ville>Toulouse</ville>
-        <codePostal>31000</codePostal>
-        <departement>Haute-Garonne</departement>
-    </salle>
-</ListeSalles>
+<Theaters xmlns="http://ws/theaters/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://ws/theaters/schemas ListeSalles.xsd" filmID="2">
+    <theater id="1">
+        <city>Toulouse</city>
+        <name>Gaumont</name>
+        <region>31</region>
+        <zipcode>31000</zipcode>
+    </theater>
+    <theater id="2">
+        <city>Toulouse</city>
+        <name>UGC</name>
+        <region>31</region>
+        <zipcode>31000</zipcode>
+    </theater>
+</Theaters>
