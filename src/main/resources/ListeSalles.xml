@@ -1,4 +1,4 @@
-<Theaters xmlns="http://ws/theaters/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<theaters xmlns="http://ws/theaters/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://ws/theaters/schemas ListeSalles.xsd" filmID="2">
     <theater id="1">
         <city>Toulouse</city>
@@ -12,4 +12,4 @@
         <region>31</region>
         <zipcode>31000</zipcode>
     </theater>
-</Theaters>
+</theaters>
