@@ -22,18 +22,9 @@ public class ListeSallesEndpoint {
     public Element handleListeSallesRequest(@XPathParam("/theatersRequest/filmID/text()") String filmId)
             throws Exception {
 
-        // parse le XML de ReleveNotesRequest pour extraire les informations de
-        // l'année scolaire, du niveau et du semestre  et creer les objets ad-hoc
+        //A faire : construire la reponse xml en allant chercher les salles dans la base de données
 
-
-        // invoque le service "releveNoteService" pour récupérer les objets recherchés
-        //
-
-        // Transforme en élément XML ad-hoc pour le retour
-        // Ici, on prend le parti de renvoyer un fichier XML statique. Il faudrait traiter la
-        // liste des évaluations avec une API XML pour fournir l'élément réponse de manière
-        // dynamique
-
+        //Solution temporaire pour tester le code
         Element elt = XmlHelper.getRootElementFromFileInClasspath("src/test/resources/ListeSallesExemples.xml") ;
         return  elt;
 
