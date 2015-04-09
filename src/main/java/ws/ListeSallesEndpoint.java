@@ -19,7 +19,7 @@ public class ListeSallesEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "theatersRequest")
     @ResponsePayload
-    public Element handleListeSallesReqyest(@XPathParam("/theatersRequest/filmID/text()") String filmId)
+    public Element handleListeSallesRequest(@XPathParam("/theatersRequest/filmID/text()") String filmId)
             throws Exception {
 
         // parse le XML de ReleveNotesRequest pour extraire les informations de
