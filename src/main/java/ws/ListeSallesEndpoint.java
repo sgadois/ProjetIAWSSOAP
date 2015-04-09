@@ -34,7 +34,7 @@ public class ListeSallesEndpoint {
         // liste des évaluations avec une API XML pour fournir l'élément réponse de manière
         // dynamique
 
-        Element elt = XmlHelper.getRootElementFromFileInClasspath("ListeSalles.xml") ;
+        Element elt = XmlHelper.getRootElementFromFileInClasspath("src/test/resources/ListeSallesExemples.xml") ;
         return  elt;
 
     }
