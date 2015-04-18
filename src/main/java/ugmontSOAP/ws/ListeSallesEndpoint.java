@@ -15,7 +15,7 @@ import java.util.List;
 @Endpoint
 public class ListeSallesEndpoint {
 
-    private static final String NAMESPACE_URI = "http://ugmontSOAP/theaters/schemas";
+    private static final String NAMESPACE_URI = "http://ugmontSOAP/ws/theaters/schemas";
 
     @Autowired
     private ITheaterDao dao;
@@ -34,11 +34,11 @@ public class ListeSallesEndpoint {
         List<Theater> t = dao.findByFilmId("tt0138902");
 
         //On crée la racine XML;
-        org.jdom2.Namespace namespace = org.jdom2.Namespace.getNamespace("http://ugmontSOAP/theaters/schemas");
+        org.jdom2.Namespace namespace = org.jdom2.Namespace.getNamespace("http://ugmontSOAP/ws/theaters/schemas");
         Element racine = new Element("theaters", namespace);
         org.jdom2.Namespace XSI = org.jdom2.Namespace.getNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
         racine.addNamespaceDeclaration(XSI);
-        racine.setAttribute("schemaLocation", "http://ugmontSOAP/theaters/schemas ListeSalles.xsd", XSI);
+        racine.setAttribute("schemaLocation", "http://ugmontSOAP/ws/theaters/schemas ListeSalles.xsd", XSI);
         racine.setAttribute("filmID", filmID);
 
         for (Theater theater : t) {

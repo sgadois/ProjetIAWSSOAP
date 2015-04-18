@@ -15,6 +15,9 @@ public class TheaterDaoH2Db implements ITheaterDao {
 
     private Database db;
 
+    public TheaterDaoH2Db() {
+    }
+
     @Autowired
     public TheaterDaoH2Db(Database db) {
         this.db = db;
