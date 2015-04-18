@@ -20,8 +20,9 @@ public class ListeSallesEndpoint {
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "theatersRequest")
+    @Namespace(prefix = "rn", uri = NAMESPACE_URI) // nom de l'élément racine
     @ResponsePayload
-    public Element handleListeSallesRequest(@XPathParam("/theatersRequest/filmID/text()") String filmID)
+    public Element handleListeSallesRequest(@XPathParam("/rn:theatersRequest/rn:filmID/text()") String filmID)
             throws Exception {
 
         //A faire : construire la reponse xml en allant chercher les salles dans la base de données
