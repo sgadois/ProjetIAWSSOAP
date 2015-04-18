@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ugmontSOAP.ws/listeSalles/schemas">
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ugmontSOAP/theaters/schemas"
+           xmlns:tns="http://ugmontSOAP/theaters/schemas">
 
-    <xs:element name="ListeSalles" type="exem:ListeSallesType" xmlns:exem="http://ugmontSOAP.ws/listeSalles/schemas"/>
+    <xs:element name="theatersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="filmID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-    <xs:complexType name="salleType">
+    <xs:element name="theaters">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="theater" type="tns:theater" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:int" name="filmID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="theater">
         <xs:all>
-            <xs:element name="nom" type="xs:string"/>
-            <xs:element name="ville" type="xs:string"/>
-            <xs:element name="codePostal" type="xs:string"/>
-            <xs:element name="departement" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="region" type="xs:string"/>
+            <xs:element name="zipcode" type="xs:string"/>
         </xs:all>
         <xs:attribute type="xs:int" name="id" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="ListeSallesType">
-        <xs:sequence>
-            <xs:element type="exem:salleType" name="salle" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://ugmontSOAP.ws/listeSalles/schemas"/>
-        </xs:sequence>
-        <xs:attribute type="xs:int" name="filmID" use="required"/>
-    </xs:complexType>
-
-
-
-    <xs:element name="ListeSallesRequest" type="exem:ListeSallesRequestType" xmlns:exem="http://ugmontSOAP.ws/listeSalles/schemas"/>
-
-    <xs:complexType name="ListeSallesRequestType">
-        <xs:all>
-            <xs:element type="xs:string" name="filmID"/>
-        </xs:all>
-    </xs:complexType>
 </xs:schema>
