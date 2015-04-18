@@ -7,7 +7,7 @@
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>ugmont-soap Spring-WS Application</name>
-    <url>http://www.springframework.org/spring-ws</url>
+    <url>http://www.springframework.org/spring-ugmontSOAP.ws</url>
     <build>
         <finalName>ugmont-soap</finalName>
         <plugins>
@@ -42,6 +42,21 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.187</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-grizzly2-http</artifactId>
+            <version>2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.ext</groupId>
+            <artifactId>jersey-declarative-linking</artifactId>
+            <version>2.17</version>
         </dependency>
     </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package ws;
+package ugmontSOAP.ws;
 
 import org.springframework.core.io.ClassPathResource;
 import org.w3c.dom.Document;

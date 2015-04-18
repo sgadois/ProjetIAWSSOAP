@@ -1,5 +1,6 @@
-package ws;
+package ugmontSOAP.ws;
 
+import org.glassfish.grizzly.http.server.HttpServer;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +10,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.ws.test.server.MockWebServiceClient;
+import ugmontSOAP.Main;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -27,10 +29,12 @@ public class ListeSallesEndpointTestIntegration {
     private ApplicationContext applicationContext;
 
     private MockWebServiceClient mockClient;
+    private HttpServer server;
 
     @Before
     public void createClient() {
         mockClient = MockWebServiceClient.createClient(applicationContext);
+        server = Main.startServer();
     }
 
     @Test

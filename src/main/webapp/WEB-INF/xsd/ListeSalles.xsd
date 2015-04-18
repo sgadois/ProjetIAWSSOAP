@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws/listeSalles/schemas">
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ugmontSOAP.ws/listeSalles/schemas">
 
-    <xs:element name="ListeSalles" type="exem:ListeSallesType" xmlns:exem="http://ws/listeSalles/schemas"/>
+    <xs:element name="ListeSalles" type="exem:ListeSallesType" xmlns:exem="http://ugmontSOAP.ws/listeSalles/schemas"/>
 
     <xs:complexType name="salleType">
         <xs:all>
@@ -16,14 +16,14 @@
 
     <xs:complexType name="ListeSallesType">
         <xs:sequence>
-            <xs:element type="exem:salleType" name="salle" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://ws/listeSalles/schemas"/>
+            <xs:element type="exem:salleType" name="salle" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://ugmontSOAP.ws/listeSalles/schemas"/>
         </xs:sequence>
         <xs:attribute type="xs:int" name="filmID" use="required"/>
     </xs:complexType>
 
 
 
-    <xs:element name="ListeSallesRequest" type="exem:ListeSallesRequestType" xmlns:exem="http://ws/listeSalles/schemas"/>
+    <xs:element name="ListeSallesRequest" type="exem:ListeSallesRequestType" xmlns:exem="http://ugmontSOAP.ws/listeSalles/schemas"/>
 
     <xs:complexType name="ListeSallesRequestType">
         <xs:all>

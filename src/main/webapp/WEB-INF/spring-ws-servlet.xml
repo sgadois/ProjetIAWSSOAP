@@ -7,12 +7,18 @@
 
     <sws:annotation-driven/>
 
-    <bean id="listeSallesEndpoint" class="ws.ListeSallesEndpoint"/>
+    <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping"/>
+    <bean class="org.springframework.ws.server.endpoint.adapter.method.XPathParamMethodArgumentResolver"/>
+
+    <bean id="listeSallesEndpoint" class="ugmontSOAP.ws.ListeSallesEndpoint"/>
+    <bean id="database" class="database.Database"/>
+    <bean id="ITheatherDao" class="dao.TheaterDaoH2Db"/>
+
 
     <sws:dynamic-wsdl id="schemas"
                       portTypeName="theaters"
-                      locationUri="/ws/"
-                      targetNamespace="http://ws/theaters/schemas">
+                      locationUri="/ugmontSOAP.ws/"
+                      targetNamespace="http://ugmontSOAP.ws/theaters/schemas">
         <sws:xsd location="/WEB-INF/xsd/ListeSalles.xsd"/>
     </sws:dynamic-wsdl>
 

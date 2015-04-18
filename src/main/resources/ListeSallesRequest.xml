@@ -1,4 +1,4 @@
-<theatersRequest xmlns="http://ws/theaters/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xsi:schemaLocation="http://ws/theaters/schemas ListeSalles.xsd">
-    <filmID>2</filmID>
+<theatersRequest xmlns="http://ugmontSOAP/theaters/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://ugmontSOAP/theaters/schemas ListeSalles.xsd">
+    <filmID>tt0138902</filmID>
 </theatersRequest>

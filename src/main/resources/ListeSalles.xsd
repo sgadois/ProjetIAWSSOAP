@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws/theaters/schemas">
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ugmontSOAP/theaters/schemas"
+           xmlns:tns="http://ugmontSOAP/theaters/schemas">
 
-    <xs:element name="theaters" type="exem:theatersType" xmlns:exem="http://ws/theaters/schemas"/>
+    <xs:element name="theatersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="filmID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-    <xs:complexType name="theaterType">
+    <xs:element name="theaters">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="theater" type="tns:theater" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:int" name="filmID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="theater">
         <xs:all>
             <xs:element name="city" type="xs:string"/>
             <xs:element name="name" type="xs:string"/>
@@ -14,20 +30,4 @@
         <xs:attribute type="xs:int" name="id" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="theatersType">
-        <xs:sequence>
-            <xs:element type="exem:theaterType" name="theater" maxOccurs="unbounded" minOccurs="0" xmlns:exem="http://ws/theaters/schemas"/>
-        </xs:sequence>
-        <xs:attribute type="xs:int" name="filmID" use="required"/>
-    </xs:complexType>
-
-
-
-    <xs:element name="theatersRequest" type="exem:theatersRequestType" xmlns:exem="http://ws/theaters/schemas"/>
-
-    <xs:complexType name="theatersRequestType">
-        <xs:all>
-            <xs:element type="xs:string" name="filmID"/>
-        </xs:all>
-    </xs:complexType>
 </xs:schema>
