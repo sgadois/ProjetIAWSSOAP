@@ -1,0 +1,4 @@
+<theatersRequest xmlns="http://ugmontSOAP/ws/theaters/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://ugmontSOAP/ws/theaters/schemas ListeSalles.xsd">
+    <filmID>tt02356</filmID>
+</theatersRequest>

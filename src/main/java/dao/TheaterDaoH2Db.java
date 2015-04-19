@@ -2,8 +2,8 @@ package dao;
 
 import database.Database;
 import domain.Theater;
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

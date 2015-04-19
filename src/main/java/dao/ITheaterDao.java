@@ -1,11 +1,9 @@
 package dao;
 
 import domain.Theater;
-import org.jvnet.hk2.annotations.Contract;
 
 import java.util.List;
 
-@Contract
 public interface ITheaterDao {
 
     /**

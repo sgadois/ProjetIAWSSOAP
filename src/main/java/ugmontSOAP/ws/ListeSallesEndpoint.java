@@ -31,7 +31,7 @@ public class ListeSallesEndpoint {
 
 
         //Récupère la liste des salles associées au filmID
-        List<Theater> t = dao.findByFilmId("tt0138902");
+        List<Theater> t = dao.findByFilmId(filmID);
 
         //On crée la racine XML;
         org.jdom2.Namespace namespace = org.jdom2.Namespace.getNamespace("http://ugmontSOAP/ws/theaters/schemas");
@@ -41,27 +41,29 @@ public class ListeSallesEndpoint {
         racine.setAttribute("schemaLocation", "http://ugmontSOAP/ws/theaters/schemas ListeSalles.xsd", XSI);
         racine.setAttribute("filmID", filmID);
 
-        for (Theater theater : t) {
-            Element e = new Element("theater", namespace);
-            e.setAttribute(new Attribute("id", theater.getId()));
-            racine.addContent(e);
+        //On crée les élements theater
+        if(t != null) {
+            for (Theater theater : t) {
+                Element e = new Element("theater", namespace);
+                e.setAttribute(new Attribute("id", theater.getId()));
+                racine.addContent(e);
 
-            Element city = new Element("city", namespace);
-            city.setText(theater.getCity());
-            e.addContent(city);
+                Element city = new Element("city", namespace);
+                city.setText(theater.getCity());
+                e.addContent(city);
 
-            Element name = new Element("name", namespace);
-            name.setText(theater.getName());
-            e.addContent(name);
+                Element name = new Element("name", namespace);
+                name.setText(theater.getName());
+                e.addContent(name);
 
-            Element region = new Element("region", namespace);
-            region.setText(theater.getRegion());
-            e.addContent(region);
+                Element region = new Element("region", namespace);
+                region.setText(theater.getRegion());
+                e.addContent(region);
 
-            Element zipcode = new Element("zipcode", namespace);
-            zipcode.setText(theater.getZipcode());
-            e.addContent(zipcode);
-
+                Element zipcode = new Element("zipcode", namespace);
+                zipcode.setText(theater.getZipcode());
+                e.addContent(zipcode);
+            }
         }
         return racine;
     }

@@ -30,24 +30,12 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
-	
-	public static Database getInstance() {
-		return INSTANCE;
-	}
-	
+
 	public void executeSql(String intructionSql) {
 		try {
 			stat.execute(intructionSql);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-	}
-	
-	public int saveUpdateOrDelete(String intructionSql) {
-		try {
-			return stat.executeUpdate(intructionSql);
-		} catch (SQLException e) {
-			return 0;
 		}
 	}
 	
