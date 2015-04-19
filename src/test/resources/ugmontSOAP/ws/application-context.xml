@@ -7,14 +7,10 @@
 
     <sws:annotation-driven/>
 
+
+
     <bean id="listeSallesEndpoint" class="ugmontSOAP.ws.ListeSallesEndpoint"/>
     <bean id="database" class="database.Database"/>
     <bean id="theatherDao" class="dao.TheaterDaoH2Db"/>
-
-
-    <sws:static-wsdl
-            id="service"
-            location="/WEB-INF/wsdl/final.wsdl"/>
-
 
 </beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ugmontSOAP/ws/theaters/schemas"
+           xmlns:tns="http://ugmontSOAP/ws/theaters/schemas">
+
+    <xs:element name="theatersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="filmID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="theaters">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="theater" type="tns:theater" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="filmID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="theater">
+        <xs:all>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="region" type="xs:string"/>
+            <xs:element name="zipcode" type="xs:string"/>
+        </xs:all>
+        <xs:attribute type="xs:int" name="id" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

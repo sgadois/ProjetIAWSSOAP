@@ -1,0 +1,26 @@
+<theaters xmlns="http://ugmontSOAP/ws/theaters/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ugmontSOAP/ws/theaters/schemas ListeSalles.xsd" filmID="tt0138902">
+    <theater id="7">
+        <city>PARIS</city>
+        <name>MK2 BASTILLE</name>
+        <region>75</region>
+        <zipcode>75011</zipcode>
+    </theater>
+    <theater id="2">
+        <city>NIORT</city>
+        <name>MOULIN DU ROC</name>
+        <region>79</region>
+        <zipcode>79000</zipcode>
+    </theater>
+    <theater id="10">
+        <city>DUNKERQUE</city>
+        <name>STUDIO 43</name>
+        <region>59</region>
+        <zipcode>59140</zipcode>
+    </theater>
+    <theater id="1">
+        <city>TOULOUSE</city>
+        <name>UTOPIA</name>
+        <region>31</region>
+        <zipcode>31000</zipcode>
+    </theater>
+</theaters>
